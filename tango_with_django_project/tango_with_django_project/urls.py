@@ -2,11 +2,15 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'tango_with_django_project.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+                       # Examples:
+                       # url(r'^$', 'tango_with_django_project.views.home',
+                       # name='home'),
+                       # url(r'^blog/', include('blog.urls')),
 
-    # url(r'^admin/', include(admin.site.urls)),
+                       url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^rango/', r'^about/', include('rango.urls')),
-)
+                       url(r'^rango/', include('rango.urls')),
+                       url(r'^index/', include('rango.urls')),
+                       url(r'^about/', include('rango.urls')),
+                       url(r'^static/', include('rango.urls')),
+                       )
